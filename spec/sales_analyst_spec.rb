@@ -140,9 +140,9 @@ RSpec.describe SalesAnalyst do
   end
 
   it 'can return the item that one time buyers have bought most' do
-    expected = sales_analyst.one_time_buyers_item
-    expect(expected).to be_a Array
-    expect(expected.first).to be_a Item
+    expected = sales_analyst.one_time_buyers_top_item
+    expect(expected.id).to eq 263505548
+    expect(expected).to be_a Item
   end
 
   it 'can return the customer that spent the most money' do
